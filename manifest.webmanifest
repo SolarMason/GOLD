@@ -1,0 +1,70 @@
+{
+  "name": "NEPA-PRO GOLD — Mobile Gold & Silver Buyers",
+  "short_name": "NEPA-PRO GOLD",
+  "description": "Northeast Pennsylvania's most transparent gold and silver buyer. Mobile service — we come to you. Always 10 to 15% below spot. Veteran-owned.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#0a0907",
+  "theme_color": "#0a0907",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["finance", "business", "shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Email a quote request",
+      "short_name": "Email",
+      "description": "Send your gold or silver details to sell@nepa-gold.com",
+      "url": "/?action=email",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Call NEPA-PRO GOLD",
+      "short_name": "Call",
+      "description": "Tap to call 570-677-7971",
+      "url": "/?action=call",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

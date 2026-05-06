@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Backdrop: deep noir with warm radial glow upper-left -->
+    <radialGradient id="cardBg" cx="22%" cy="18%" r="80%">
+      <stop offset="0%"  stop-color="#1c1812"/>
+      <stop offset="45%" stop-color="#0f0c08"/>
+      <stop offset="100%" stop-color="#050402"/>
+    </radialGradient>
+
+    <!-- Polished gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#fff7d8"/>
+      <stop offset="22%"  stop-color="#f4d68a"/>
+      <stop offset="50%"  stop-color="#d4af37"/>
+      <stop offset="78%"  stop-color="#a87c1e"/>
+      <stop offset="100%" stop-color="#7a5a14"/>
+    </linearGradient>
+
+    <!-- Vertical sheen for the GOLD wordmark -->
+    <linearGradient id="goldVert" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fff7d8"/>
+      <stop offset="38%"  stop-color="#f4d68a"/>
+      <stop offset="62%"  stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#8a6515"/>
+    </linearGradient>
+
+    <!-- Hairline gradient for frames/dividers -->
+    <linearGradient id="hairline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7a5a14" stop-opacity="0.2"/>
+      <stop offset="50%"  stop-color="#d4af37" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7a5a14" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Medallion radial -->
+    <radialGradient id="medallionBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"  stop-color="#1f1a13"/>
+      <stop offset="70%" stop-color="#0a0907"/>
+      <stop offset="100%" stop-color="#050402"/>
+    </radialGradient>
+
+    <!-- Letter sheen for NPG inside medallion -->
+    <linearGradient id="medSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#fff7d8" stop-opacity="0.85"/>
+      <stop offset="42%" stop-color="#fff7d8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Curved text path for "NEPA-PRO GOLD · MOBILE BUYERS" -->
+    <path id="medCurveTop" d="M 980,300 m -160,0 a 160,160 0 1,1 320,0 a 160,160 0 1,1 -320,0" />
+  </defs>
+
+  <!-- Card background -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#cardBg)"/>
+
+  <!-- Subtle noise/grain overlay (faux via overlapping radial highlights) -->
+  <g opacity="0.045">
+    <circle cx="950" cy="120" r="200" fill="#d4af37"/>
+    <circle cx="180" cy="520" r="240" fill="#a87c1e"/>
+  </g>
+
+  <!-- Outer hairline double-line frame -->
+  <rect x="22" y="22" width="1156" height="586" rx="14" ry="14" fill="none" stroke="url(#hairline)" stroke-width="1.2" opacity="0.55"/>
+  <rect x="32" y="32" width="1136" height="566" rx="10" ry="10" fill="none" stroke="url(#hairline)" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Corner ornaments (top-left, bottom-right dots + L-brackets) -->
+  <g stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.7">
+    <path d="M 56 80 L 80 80 L 80 56"/>
+    <circle cx="68" cy="68" r="2.4" fill="url(#goldGrad)" stroke="none"/>
+    <path d="M 1144 574 L 1120 574 L 1120 550"/>
+    <circle cx="1132" cy="562" r="2.4" fill="url(#goldGrad)" stroke="none"/>
+  </g>
+
+  <!-- VETERAN-OWNED · NEPA pill (top-left) -->
+  <g transform="translate(80, 100)">
+    <rect x="0" y="0" width="280" height="34" rx="17" ry="17" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.7"/>
+    <text x="140" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle" fill="url(#goldGrad)">VETERAN-OWNED  ·  NEPA</text>
+  </g>
+
+  <!-- NEPA-PRO eyebrow (the new brand prefix, prominent) -->
+  <text x="80" y="220" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" letter-spacing="14" fill="url(#goldGrad)">NEPA-PRO</text>
+
+  <!-- GOLD massive wordmark -->
+  <text x="80" y="395" font-family="Georgia, 'Times New Roman', 'DejaVu Serif', serif" font-size="200" font-weight="700" letter-spacing="-2" fill="url(#goldVert)">GOLD</text>
+
+  <!-- Taglines below the wordmark -->
+  <text x="80" y="450" font-family="-apple-system, 'Helvetica Neue', 'DejaVu Sans', sans-serif" font-size="22" font-weight="500" fill="#faf3e0" opacity="0.9">We come to you. Cash on the spot.</text>
+  <text x="80" y="482" font-family="-apple-system, 'Helvetica Neue', 'DejaVu Sans', sans-serif" font-size="18" font-weight="500" fill="#d4af37" opacity="0.85">Transparent pricing — 10–15% below spot.</text>
+
+  <!-- ===== Right-side circular NPG medallion ===== -->
+  <g transform="translate(0, 0)">
+    <!-- Outer ring -->
+    <circle cx="980" cy="300" r="155" fill="url(#medallionBg)" stroke="url(#goldGrad)" stroke-width="1.6" opacity="0.95"/>
+    <!-- Inner ring (hairline) -->
+    <circle cx="980" cy="300" r="142" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.55"/>
+    <!-- Inner solid core -->
+    <circle cx="980" cy="300" r="118" fill="#0a0907" stroke="url(#goldGrad)" stroke-width="0.6" opacity="1"/>
+
+    <!-- Curved label running around the medallion -->
+    <text font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" letter-spacing="6" fill="url(#goldGrad)">
+      <textPath href="#medCurveTop" startOffset="0%">NEPA-PRO GOLD  ·  MOBILE BUYERS  ·  NEPA-PRO GOLD  ·  MOBILE BUYERS  ·  </textPath>
+    </text>
+
+    <!-- NPG letters inside medallion -->
+    <svg x="880" y="220" width="200" height="160" viewBox="0 0 200 160">
+      <text x="100" y="115" font-family="Georgia, 'Times New Roman', 'DejaVu Serif', serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="0" fill="url(#goldGrad)">NPG</text>
+      <text x="100" y="115" font-family="Georgia, 'Times New Roman', 'DejaVu Serif', serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="0" fill="url(#medSheen)" opacity="0.45">NPG</text>
+    </svg>
+  </g>
+
+  <!-- ===== Footer 3-column ===== -->
+  <line x1="80" y1="525" x2="1120" y2="525" stroke="url(#hairline)" stroke-width="0.8" opacity="0.45"/>
+
+  <g font-family="-apple-system, 'Helvetica Neue', 'DejaVu Sans', sans-serif">
+    <!-- Col 1: CALL -->
+    <text x="80" y="555" font-size="11" font-weight="700" letter-spacing="3" fill="#d4af37" opacity="0.85">CALL OR TEXT</text>
+    <text x="80" y="585" font-size="22" font-weight="700" fill="#faf3e0" letter-spacing="2">570 · 677 · 7971</text>
+
+    <!-- Col 2: EMAIL -->
+    <text x="430" y="555" font-size="11" font-weight="700" letter-spacing="3" fill="#d4af37" opacity="0.85">EMAIL FOR A QUOTE</text>
+    <text x="430" y="585" font-size="22" font-weight="700" fill="#faf3e0">sell@nepa-gold.com</text>
+
+    <!-- Col 3: VISIT -->
+    <text x="860" y="555" font-size="11" font-weight="700" letter-spacing="3" fill="#d4af37" opacity="0.85">VISIT</text>
+    <text x="860" y="585" font-size="22" font-weight="700" fill="#faf3e0">nepa-gold.com</text>
+  </g>
+</svg>

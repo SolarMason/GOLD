@@ -1,0 +1,1815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=5" />
+
+<title>NEPA-PRO GOLD — We come to you. Cash on the spot.</title>
+<meta name="description" content="Northeast Pennsylvania's most transparent gold and silver buyer. We come to you. Cash on the spot — always 10 to 15% below spot. Veteran-owned and operated." />
+<meta name="theme-color" content="#0a0907" />
+<meta name="color-scheme" content="dark" />
+
+<!-- iOS PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="NEPA-PRO GOLD" />
+<meta name="format-detection" content="telephone=yes" />
+
+<!-- Icons -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="favicon.ico" sizes="any" />
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+<link rel="mask-icon" href="favicon.svg" color="#d4af37" />
+<link rel="manifest" href="manifest.webmanifest" />
+
+<!-- Open Graph (unified business-card share image) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="NEPA-PRO GOLD" />
+<meta property="og:title" content="NEPA-PRO GOLD — We come to you. Cash on the spot." />
+<meta property="og:description" content="Northeast PA's most transparent gold and silver buyer. Mobile service. 10–15% below spot — always. Email sell@nepa-gold.com." />
+<meta property="og:url" content="https://nepa-gold.com/" />
+<meta property="og:image" content="https://nepa-gold.com/og-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="NEPA-PRO GOLD — Northeast Pennsylvania's transparent mobile gold buyer." />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NEPA-PRO GOLD — We come to you. Cash on the spot." />
+<meta name="twitter:description" content="Northeast PA's most transparent gold buyer. 10–15% below spot. sell@nepa-gold.com" />
+<meta name="twitter:image" content="https://nepa-gold.com/og-card.png" />
+
+<!-- iMessage / Apple share rich preview -->
+<link rel="canonical" href="https://nepa-gold.com/" />
+
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "NEPA-PRO GOLD",
+  "image": "https://nepa-gold.com/og-card.png",
+  "url": "https://nepa-gold.com/",
+  "telephone": "+1-570-677-7971",
+  "email": "sell@nepa-gold.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "PA",
+    "addressCountry": "US",
+    "addressLocality": "Scranton"
+  },
+  "areaServed": [
+    "Lackawanna County, PA",
+    "Luzerne County, PA",
+    "Wayne County, PA",
+    "Pike County, PA",
+    "Susquehanna County, PA",
+    "Wyoming County, PA",
+    "Bradford County, PA",
+    "Carbon County, PA",
+    "Monroe County, PA"
+  ],
+  "description": "Northeast Pennsylvania's most transparent mobile gold and silver buyer. Veteran-owned. Cash on the spot. Always 10–15% below spot price.",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  }]
+}
+</script>
+
+<!-- Fonts: native iOS system stack (San Francisco). Zero web fonts loaded. -->
+<!-- iOS native system fonts (San Francisco family). No web fonts loaded — instant, offline, and identical to native iOS apps. -->
+
+<style>
+/* ========================================================================
+   NEPA-PRO GOLD — PWA stylesheet
+   Aesthetic: iOS-native glassmorphism × bullion-luxury editorial
+   ======================================================================== */
+
+:root {
+  /* Palette */
+  --noir:        #0a0907;
+  --obsidian:    #14110d;
+  --ink:         #1c1812;
+  --ink-2:       #221d15;
+  --hairline:    rgba(244,214,138,0.12);
+  --hairline-mid:rgba(244,214,138,0.22);
+  --hairline-on: rgba(244,214,138,0.45);
+  --champagne:   #e6c878;
+  --gold:        #d4af37;
+  --gold-deep:   #b8860b;
+  --bullion:     #f4d68a;
+  --gold-bright: #fff1c0;
+  --cream:       #faf3e0;
+  --ash:         rgba(250,243,224,0.62);
+  --ash-strong:  rgba(250,243,224,0.78);
+
+  /* Type — iOS native (San Francisco). Identical font stack to UIKit/SwiftUI native apps. */
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body:    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono:    ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, "Cascadia Mono", Consolas, monospace;
+
+  /* Spring easing */
+  --ease:        cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Surfaces */
+  --glass-bg:    rgba(28, 24, 18, 0.55);
+  --glass-bg-2:  rgba(34, 29, 21, 0.62);
+  --glass-blur:  saturate(180%) blur(22px);
+  --glass-blur-strong: saturate(200%) blur(36px);
+
+  /* Radii */
+  --r-xs: 8px;
+  --r-sm: 14px;
+  --r-md: 22px;
+  --r-lg: 28px;
+  --r-xl: 36px;
+  --r-2xl: 44px;
+
+  /* Safe areas */
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+}
+
+* { box-sizing: border-box; }
+*::selection { background: var(--gold); color: var(--noir); }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--noir);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-feature-settings: "kern", "ss01", "ss02";
+  font-synthesis: none;
+}
+
+body {
+  /* Base background — warm radial + grain */
+  background:
+    radial-gradient(120% 70% at 20% 0%, rgba(180,134,11,0.16) 0%, rgba(180,134,11,0) 55%),
+    radial-gradient(80% 50% at 90% 10%, rgba(244,214,138,0.07) 0%, rgba(244,214,138,0) 60%),
+    radial-gradient(100% 80% at 50% 110%, rgba(212,175,55,0.08) 0%, rgba(212,175,55,0) 60%),
+    var(--noir);
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-left: var(--safe-l);
+  padding-right: var(--safe-r);
+}
+/* Subtle SVG grain overlay across whole page */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.7  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: .55;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* Accessible focus */
+:focus-visible {
+  outline: 2px solid var(--bullion);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Anchors */
+a { color: var(--bullion); text-decoration: none; }
+
+/* Inline gold gradient text helper */
+.gold-text {
+  background: linear-gradient(135deg, #fff7d8 0%, #f4d68a 24%, #d4af37 50%, #a87c1e 78%, #7a5a14 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+
+/* ============= LAYOUT ============= */
+.wrap { position: relative; z-index: 1; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 22px; }
+@media (min-width: 720px)  { .container { padding: 0 32px; } }
+@media (min-width: 1024px) { .container { padding: 0 48px; } }
+
+/* ============= TOP NAV ============= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 50;
+  padding-top: var(--safe-t);
+  background: linear-gradient(180deg, rgba(10,9,7,0.86) 0%, rgba(10,9,7,0.55) 80%, rgba(10,9,7,0) 100%);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid transparent;
+  transition: border-color .35s var(--ease), background .35s var(--ease);
+}
+.nav.scrolled {
+  border-bottom-color: var(--hairline);
+  background: linear-gradient(180deg, rgba(10,9,7,0.92) 0%, rgba(10,9,7,0.85) 100%);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding: 12px 22px;
+  max-width: 1200px; margin: 0 auto;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--cream);
+  letter-spacing: 0.02em;
+}
+.brand-mark { width: 36px; height: 36px; border-radius: 9px;
+  box-shadow: 0 0 0 1px var(--hairline-mid), 0 6px 20px rgba(0,0,0,0.45); }
+.brand-name { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap; }
+.brand-name .am { color: var(--bullion); }
+
+/* Click-to-call pill button */
+.call-btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 10px 14px 10px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(244,214,138,0.18), rgba(212,175,55,0.10));
+  border: 1px solid var(--hairline-on);
+  color: var(--cream);
+  font-family: var(--body); font-weight: 600; font-size: 14.5px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255,247,216,0.18), 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
+  white-space: nowrap;
+}
+.call-btn:hover {
+  background: linear-gradient(135deg, rgba(244,214,138,0.28), rgba(212,175,55,0.16));
+}
+.call-btn:active { transform: scale(0.96); }
+.call-btn .ring {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff7d8, #d4af37 60%, #7a5a14);
+  display: grid; place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4), 0 0 0 1px rgba(244,214,138,0.6);
+  position: relative;
+}
+.call-btn .ring::before {
+  content: "";
+  position: absolute; inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  opacity: 0.6;
+  animation: pulseRing 2.6s var(--ease) infinite;
+}
+.call-btn .ring svg { width: 11px; height: 11px; color: #1a1206; }
+@keyframes pulseRing {
+  0%   { transform: scale(0.85); opacity: 0.7; }
+  70%  { transform: scale(1.45); opacity: 0; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+.call-num { display: inline; }
+.call-label { display: none; }
+@media (min-width: 540px) {
+  .call-label { display: inline; opacity: 0.78; margin-right: 4px; }
+}
+
+/* ============= HERO ============= */
+.hero {
+  position: relative;
+  padding: calc(96px + var(--safe-t)) 0 56px;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 60%;
+  transform: translate(-50%, -50%);
+  width: 1100px; height: 1100px;
+  background: radial-gradient(closest-side, rgba(212,175,55,0.18), rgba(212,175,55,0) 70%);
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+.kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(28,24,18,0.55);
+  border: 1px solid var(--hairline-mid);
+  color: var(--bullion);
+  font-family: var(--display);
+  font-weight: 700; font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(46px, 9vw, 116px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin: 24px 0 18px;
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+}
+.hero h1 .ital {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.hero .lede {
+  max-width: 640px;
+  font-size: clamp(17px, 2.2vw, 21px);
+  line-height: 1.5;
+  color: var(--ash-strong);
+  margin: 0 0 32px;
+  font-weight: 400;
+}
+.hero .lede strong { color: var(--cream); font-weight: 600; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* Primary CTA — gold liquid button */
+.cta-primary {
+  position: relative;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 17px 24px;
+  border-radius: 18px;
+  font-family: var(--body);
+  font-weight: 700; font-size: 16px;
+  letter-spacing: 0.005em;
+  color: #1a1206;
+  background:
+    linear-gradient(180deg, rgba(255,247,216,0.5) 0%, rgba(255,247,216,0) 50%),
+    linear-gradient(135deg, #f4d68a 0%, #d4af37 50%, #b8860b 100%);
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55),
+    inset 0 -1px 0 rgba(0,0,0,0.18),
+    0 14px 30px rgba(212,175,55,0.28),
+    0 4px 8px rgba(0,0,0,0.4);
+  text-decoration: none;
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease), filter .22s var(--ease);
+}
+.cta-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.cta-primary:active { transform: translateY(1px) scale(0.98); }
+.cta-primary svg { width: 18px; height: 18px; }
+
+/* Secondary CTA — glass pill */
+.cta-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: rgba(28,24,18,0.55);
+  border: 1px solid var(--hairline-mid);
+  color: var(--cream);
+  font-weight: 600; font-size: 15px;
+  text-decoration: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease);
+}
+.cta-secondary:hover { background: rgba(28,24,18,0.8); border-color: var(--hairline-on); }
+.cta-secondary:active { transform: scale(0.97); }
+
+/* Hero trust ribbon below CTAs */
+.trust-row {
+  margin-top: 28px;
+  display: flex; flex-wrap: wrap; gap: 18px 22px;
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--ash);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.trust-row span { display: inline-flex; align-items: center; gap: 8px; }
+.trust-row .check {
+  width: 16px; height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  color: #1a1206;
+  display: inline-grid; place-items: center;
+}
+.trust-row .check svg { width: 10px; height: 10px; }
+
+/* Hero stagger animation */
+.fade-up { opacity: 0; transform: translateY(14px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.is-in   { opacity: 1; transform: translateY(0); }
+
+/* ============= SPOT TICKER ============= */
+.spot-band {
+  margin-top: 18px;
+  position: relative;
+}
+.spot-grid {
+  display: grid; grid-template-columns: 1fr; gap: 12px;
+}
+@media (min-width: 720px) {
+  .spot-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+
+.spot-card {
+  position: relative;
+  padding: 16px 18px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--hairline);
+  box-shadow: inset 0 1px 0 rgba(255,247,216,0.06), 0 12px 30px rgba(0,0,0,0.35);
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px;
+}
+.metal-chip {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  color: #1a1206;
+  font-family: var(--display);
+  font-weight: 800; font-size: 15px; letter-spacing: 0.05em;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 6px 14px rgba(0,0,0,0.35);
+}
+.metal-chip.ag {
+  background: linear-gradient(135deg, #f1f1ef, #b9bcbe 50%, #6f7274);
+  color: #1a1c1f;
+}
+.spot-meta {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.spot-meta .label {
+  font-family: var(--display);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ash);
+}
+.spot-meta .price {
+  font-family: var(--mono);
+  font-size: 22px; font-weight: 600;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.spot-meta .price .unit { font-size: 11px; color: var(--ash); margin-left: 6px; letter-spacing: 0.1em; }
+
+.spot-edit {
+  appearance: none; border: 1px solid var(--hairline-mid);
+  background: rgba(0,0,0,0.25);
+  color: var(--bullion);
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  padding: 7px 11px; border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s var(--ease);
+}
+.spot-edit:hover { background: rgba(244,214,138,0.1); }
+
+.spot-foot {
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: var(--ash);
+  letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.spot-foot .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: blink 2s var(--ease) infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+.spot-foot a { color: var(--bullion); text-decoration: underline; text-decoration-color: var(--hairline-on); text-underline-offset: 3px; }
+
+/* ============= SECTION FRAMING ============= */
+section { padding: 84px 0; position: relative; }
+@media (min-width: 1024px) { section { padding: 110px 0; } }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--bullion);
+  margin-bottom: 14px;
+}
+h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(34px, 5.4vw, 62px);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+}
+h2 .ital { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+.section-lede {
+  max-width: 620px;
+  font-size: 16.5px;
+  color: var(--ash-strong);
+  margin: 0 0 32px;
+}
+
+/* ============= ESTIMATOR ============= */
+.estimator-shell {
+  position: relative;
+  border-radius: var(--r-2xl);
+  background: linear-gradient(180deg, rgba(34,29,21,0.75), rgba(20,17,13,0.7));
+  border: 1px solid var(--hairline-mid);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow:
+    inset 0 1px 0 rgba(255,247,216,0.08),
+    0 30px 80px rgba(0,0,0,0.5),
+    0 8px 22px rgba(0,0,0,0.35);
+  padding: 22px 20px 24px;
+  overflow: hidden;
+}
+@media (min-width: 720px) { .estimator-shell { padding: 32px; } }
+@media (min-width: 1024px) { .estimator-shell { padding: 44px; } }
+
+.estimator-shell::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(244,214,138,0.12) 0%, rgba(244,214,138,0) 70%);
+  pointer-events: none;
+}
+
+/* Segmented metal switcher (iOS-style) */
+.seg {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid var(--hairline);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 0 26px;
+}
+.seg button {
+  appearance: none;
+  border: 0; background: transparent;
+  font-family: var(--body); font-weight: 600; font-size: 14px;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--ash);
+  padding: 11px 12px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: color .25s var(--ease);
+  z-index: 1;
+}
+.seg button[aria-selected="true"] { color: #1a1206; }
+.seg .pill {
+  position: absolute;
+  top: 4px; left: 4px;
+  width: calc(50% - 4px); height: calc(100% - 8px);
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  border-radius: 11px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform .35s var(--ease);
+}
+.seg.is-silver .pill {
+  transform: translateX(100%);
+  background: linear-gradient(135deg, #f1f1ef, #b9bcbe 50%, #6f7274);
+}
+
+/* Estimator grid */
+.est-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 900px) { .est-grid { grid-template-columns: 1.05fr 1fr; gap: 36px; } }
+
+.field-label {
+  font-family: var(--display);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin: 0 0 10px;
+}
+
+/* Karat / fineness chips */
+.chip-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.chip {
+  appearance: none;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--hairline);
+  color: var(--cream);
+  font-family: var(--body); font-weight: 600; font-size: 14px; letter-spacing: 0.02em;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .22s var(--ease);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chip .sub { font-family: var(--mono); font-size: 11px; color: var(--ash); font-weight: 500; }
+.chip:hover { border-color: var(--hairline-on); background: rgba(28,24,18,0.7); }
+.chip[aria-selected="true"] {
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  color: #1a1206;
+  border-color: rgba(0,0,0,0.18);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 6px 14px rgba(0,0,0,0.3);
+}
+.chip[aria-selected="true"] .sub { color: rgba(26,18,6,0.7); }
+
+/* Inputs */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 8px;
+}
+.text-input {
+  appearance: none;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid var(--hairline-mid);
+  color: var(--cream);
+  font-family: var(--mono); font-size: 18px; font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 14px 16px;
+  border-radius: 14px;
+  outline: none;
+  transition: border-color .22s var(--ease), background .22s var(--ease);
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.text-input:focus { border-color: var(--gold); background: rgba(0,0,0,0.6); }
+.text-input::-webkit-outer-spin-button,
+.text-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.text-input[type="number"] { -moz-appearance: textfield; }
+
+/* Unit toggle (small segmented) */
+.unit-seg {
+  position: relative;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid var(--hairline);
+  height: 100%;
+}
+.unit-seg button {
+  appearance: none; border: 0; background: transparent;
+  color: var(--ash);
+  font-family: var(--body); font-weight: 600; font-size: 12px;
+  padding: 0 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  z-index: 1;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  transition: color .22s var(--ease);
+}
+.unit-seg button[aria-selected="true"] { color: var(--cream); }
+.unit-seg .pill {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(33.333% - 2px);
+  height: calc(100% - 6px);
+  background: rgba(244,214,138,0.16);
+  border: 1px solid var(--hairline-on);
+  border-radius: 9px;
+  transition: transform .3s var(--ease);
+}
+.unit-seg[data-idx="1"] .pill { transform: translateX(100%); }
+.unit-seg[data-idx="2"] .pill { transform: translateX(200%); }
+
+/* Slider for offer % */
+.slider-shell {
+  margin-top: 8px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--hairline);
+  padding: 14px 16px 12px;
+  border-radius: 16px;
+}
+.slider-row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  margin-bottom: 10px;
+}
+.slider-row .pct {
+  font-family: var(--mono);
+  font-size: 28px; font-weight: 700;
+  color: var(--bullion);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.slider-row .pct .small { font-size: 14px; color: var(--ash); margin-left: 4px; font-weight: 500; }
+.slider-row .below {
+  font-family: var(--display); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ash);
+}
+
+input[type="range"].range {
+  appearance: none; -webkit-appearance: none;
+  width: 100%; height: 30px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+input[type="range"].range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold) var(--p,50%), rgba(255,255,255,0.12) var(--p,50%));
+}
+input[type="range"].range::-moz-range-track {
+  height: 6px; border-radius: 3px; background: rgba(255,255,255,0.12);
+}
+input[type="range"].range::-moz-range-progress {
+  height: 6px; border-radius: 3px; background: var(--gold);
+}
+input[type="range"].range::-webkit-slider-thumb {
+  appearance: none; -webkit-appearance: none;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  margin-top: -10px;
+  background: radial-gradient(circle at 30% 30%, #fff7d8, #d4af37 60%, #7a5a14);
+  border: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+  cursor: grab;
+  transition: transform .15s var(--ease);
+}
+input[type="range"].range:active::-webkit-slider-thumb { transform: scale(1.08); cursor: grabbing; }
+input[type="range"].range::-moz-range-thumb {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff7d8, #d4af37 60%, #7a5a14);
+  border: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+  cursor: grab;
+}
+
+.range-ticks {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 11px; color: var(--ash);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* Output card */
+.payout-card {
+  position: relative;
+  border-radius: var(--r-lg);
+  padding: 22px 22px 24px;
+  background:
+    radial-gradient(120% 80% at 0% 0%, rgba(244,214,138,0.16) 0%, rgba(244,214,138,0) 60%),
+    linear-gradient(180deg, rgba(34,29,21,0.85), rgba(14,11,7,0.92));
+  border: 1px solid var(--hairline-on);
+  box-shadow: inset 0 1px 0 rgba(255,247,216,0.12), 0 18px 40px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.payout-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(80% 60% at 100% 100%, rgba(212,175,55,0.18) 0%, rgba(0,0,0,0) 60%);
+  pointer-events: none;
+}
+
+.payout-card .label-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 6px;
+  font-family: var(--display);
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--bullion);
+}
+.payout-card .your-offer {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(54px, 9vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #fff7d8 0%, #f4d68a 28%, #d4af37 58%, #a87c1e 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 1;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  margin: 6px 0 4px;
+}
+.payout-meta {
+  margin-top: 10px;
+  display: grid; gap: 8px;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  color: var(--ash-strong);
+  font-variant-numeric: tabular-nums;
+}
+.payout-meta .row {
+  display: flex; justify-content: space-between; gap: 12px;
+  border-top: 1px dashed var(--hairline);
+  padding-top: 8px;
+}
+.payout-meta .row:first-child { border-top: 0; padding-top: 0; }
+.payout-meta .row .lab { color: var(--ash); font-family: var(--body); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+
+.payout-cta-row {
+  margin-top: 18px;
+  display: grid; gap: 10px;
+}
+@media (min-width: 540px) { .payout-cta-row { grid-template-columns: 1fr auto; } }
+
+.email-quote-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 22px;
+  border-radius: 16px;
+  font-family: var(--body); font-weight: 700; font-size: 15.5px;
+  text-decoration: none;
+  background:
+    linear-gradient(180deg, rgba(255,247,216,0.55) 0%, rgba(255,247,216,0) 50%),
+    linear-gradient(135deg, #f4d68a 0%, #d4af37 50%, #b8860b 100%);
+  color: #1a1206;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 12px 24px rgba(212,175,55,0.25), 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform .22s var(--ease), filter .22s var(--ease);
+  text-align: center;
+}
+.email-quote-btn:hover { filter: brightness(1.06); }
+.email-quote-btn:active { transform: scale(0.97); }
+.email-quote-btn svg { width: 16px; height: 16px; }
+
+/* Tiny note under estimator */
+.est-note {
+  margin-top: 18px; padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+  font-size: 12.5px;
+  color: var(--ash);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* Editable spot price modal-ish inline */
+.spot-edit-panel {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--hairline);
+  display: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.spot-edit-panel.open { display: flex; }
+.spot-edit-panel label { font-size: 11px; color: var(--ash); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; font-family: var(--display); display:block; margin-bottom: 4px; }
+.spot-edit-panel input { font-family: var(--mono); font-size: 16px; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.45); border: 1px solid var(--hairline-mid); color: var(--cream); width: 130px; }
+.spot-edit-panel button.apply {
+  appearance: none; border: 0;
+  padding: 10px 16px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  color: #1a1206; font-weight: 700; font-size: 14px; cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+/* ============= "WHAT WE BUY" ============= */
+.buy-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+@media (min-width: 720px)  { .buy-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
+@media (min-width: 1024px) { .buy-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.buy-card {
+  position: relative;
+  padding: 20px 18px 22px;
+  border-radius: var(--r-md);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--hairline);
+  box-shadow: inset 0 1px 0 rgba(255,247,216,0.05);
+  transition: transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+}
+.buy-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--hairline-on);
+  background: rgba(34,29,21,0.7);
+}
+.buy-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(244,214,138,0.18), rgba(0,0,0,0.4));
+  border: 1px solid var(--hairline-mid);
+  margin-bottom: 14px;
+  color: var(--bullion);
+}
+.buy-icon svg { width: 22px; height: 22px; }
+.buy-card h3 { font-size: 17px; }
+.buy-card p { margin: 4px 0 0; font-size: 14px; color: var(--ash-strong); line-height: 1.45; }
+
+/* ============= "HOW IT WORKS" ============= */
+.steps {
+  display: grid; grid-template-columns: 1fr; gap: 14px;
+}
+@media (min-width: 900px) { .steps { grid-template-columns: 1fr 1fr 1fr; gap: 22px; } }
+
+.step {
+  position: relative;
+  padding: 26px 22px;
+  border-radius: var(--r-lg);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+}
+.step .num {
+  position: absolute; top: 18px; right: 22px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 56px; font-weight: 600;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--bullion), var(--gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  opacity: 0.3;
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+}
+.step h3 { font-size: 19px; margin-top: 4px; }
+.step p { margin: 6px 0 0; font-size: 14.5px; color: var(--ash-strong); line-height: 1.55; }
+
+/* ============= PILLARS ============= */
+.pillars {
+  display: grid; grid-template-columns: 1fr; gap: 14px;
+}
+@media (min-width: 720px)  { .pillars { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .pillars { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+.pillar {
+  padding: 22px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, rgba(34,29,21,0.55), rgba(14,11,7,0.45));
+  border: 1px solid var(--hairline);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.pillar .ico {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(244,214,138,0.22), rgba(0,0,0,0.4));
+  border: 1px solid var(--hairline-mid);
+  display: grid; place-items: center;
+  color: var(--bullion);
+  margin-bottom: 14px;
+}
+.pillar .ico svg { width: 18px; height: 18px; }
+.pillar h3 { font-size: 17px; margin-bottom: 4px; }
+.pillar p { margin: 0; font-size: 13.5px; color: var(--ash-strong); line-height: 1.5; }
+
+/* ============= SERVICE AREA ============= */
+.area-card {
+  padding: 28px 24px;
+  border-radius: var(--r-lg);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--hairline);
+}
+.county-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.county-pill {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--hairline-mid);
+  font-size: 13px; color: var(--cream); font-weight: 500;
+}
+
+/* ============= FINAL CTA BANNER ============= */
+.cta-banner {
+  position: relative;
+  padding: 48px 28px 56px;
+  border-radius: var(--r-2xl);
+  text-align: center;
+  background:
+    radial-gradient(110% 80% at 50% 0%, rgba(244,214,138,0.18) 0%, rgba(0,0,0,0) 65%),
+    linear-gradient(180deg, rgba(34,29,21,0.85), rgba(14,11,7,0.95));
+  border: 1px solid var(--hairline-on);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.cta-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.7  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.5; pointer-events: none; mix-blend-mode: overlay;
+}
+.cta-banner h2 { margin-bottom: 14px; }
+.cta-banner p { color: var(--ash-strong); max-width: 560px; margin: 0 auto 26px; font-size: 17px; }
+
+/* ============= FOOTER ============= */
+footer {
+  padding: 36px 0 calc(40px + var(--safe-b));
+  border-top: 1px solid var(--hairline);
+  margin-top: 64px;
+  font-size: 13px;
+  color: var(--ash);
+}
+.foot-grid {
+  display: grid; grid-template-columns: 1fr; gap: 22px;
+  align-items: start;
+}
+@media (min-width: 720px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+.foot-grid .brand-block { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.foot-grid h4 {
+  font-family: var(--display); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--bullion); margin: 0 0 12px;
+}
+.foot-grid a { color: var(--cream); display: block; padding: 4px 0; font-size: 14.5px; }
+.foot-grid a:hover { color: var(--bullion); }
+.foot-grid .hours-line { color: var(--cream); display: block; padding: 4px 0; font-size: 14.5px; opacity: 0.85; }
+
+.legal {
+  margin-top: 28px;
+  font-size: 11.5px;
+  color: var(--ash);
+  letter-spacing: 0.04em;
+  display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: space-between; align-items: center;
+}
+
+/* ============= MOBILE STICKY BOTTOM CTA ============= */
+.sticky-cta {
+  position: fixed;
+  bottom: calc(12px + var(--safe-b));
+  left: 12px; right: 12px;
+  z-index: 40;
+  display: none;
+}
+.sticky-cta.visible { display: block; }
+.sticky-cta a {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,247,216,0.55) 0%, rgba(255,247,216,0) 50%),
+    linear-gradient(135deg, #f4d68a 0%, #d4af37 50%, #b8860b 100%);
+  color: #1a1206;
+  font-weight: 700; font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.2);
+}
+@media (min-width: 720px) { .sticky-cta { display: none !important; } }
+
+/* ============= UTILITIES ============= */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline-on) 30%, var(--hairline-on) 70%, transparent);
+  margin: 0;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="NEPA-PRO GOLD home">
+      <img src="icon.svg" alt="" class="brand-mark" width="36" height="36" />
+      <span class="brand-name">NEPA-PRO <span class="am">Gold</span></span>
+    </a>
+    <a class="call-btn" href="tel:+15706777971" aria-label="Call NEPA-PRO GOLD at 570-677-7971">
+      <span class="ring" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </span>
+      <span class="call-label">Call</span>
+      <span class="call-num">570-677-7971</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Sell your gold to NEPA-PRO GOLD">
+    <div class="container">
+      <span class="kicker fade-up" data-delay="0"><span class="dot"></span> Northeast Pennsylvania · Mobile Service</span>
+
+      <h1 class="fade-up" data-delay="80">
+        Sell your gold.<br>
+        <span class="gold-text">We come</span> <span class="ital">to you.</span>
+      </h1>
+
+      <p class="lede fade-up" data-delay="160">
+        NEPA-PRO GOLD is the region's most transparent buyer of gold and silver — at your kitchen table,
+        not behind a counter. <strong>Always 10 to 15% below spot.</strong> In writing. Cash on the spot.
+      </p>
+
+      <div class="cta-row fade-up" data-delay="240">
+        <a class="cta-primary" href="mailto:sell@nepa-gold.com?subject=Quote%20request%20%E2%80%94%20NEPA-PRO%20GOLD&amp;body=Hi%20NEPA-PRO%20GOLD%2C%0A%0AI%27d%20like%20a%20quote%20on%20the%20following%3A%0A-%20Item(s)%3A%20%0A-%20Approx.%20weight%3A%20%0A-%20Karat%2Ffineness%20(if%20known)%3A%20%0A%0AMy%20town%2Fzip%3A%20%0ABest%20time%20to%20meet%3A%20%0A%0AThanks!">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email for a quote
+        </a>
+        <a class="cta-secondary" href="#estimator">
+          Try the live estimator
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="trust-row fade-up" data-delay="320">
+        <span><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Veteran-owned</span>
+        <span><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>We come to you</span>
+        <span><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>No back-room markups</span>
+        <span><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cash on the spot</span>
+      </div>
+
+      <!-- Live spot ticker, pinned below hero -->
+      <div class="spot-band fade-up" data-delay="400" aria-label="Live spot prices">
+        <div class="spot-grid">
+          <article class="spot-card">
+            <div class="metal-chip">Au</div>
+            <div class="spot-meta">
+              <div class="label">Gold · spot</div>
+              <div class="price"><span id="goldSpot">—</span><span class="unit">USD / oz t</span></div>
+            </div>
+            <button class="spot-edit" id="goldEditBtn" aria-controls="spotPanel" aria-expanded="false">Edit</button>
+          </article>
+
+          <article class="spot-card">
+            <div class="metal-chip ag">Ag</div>
+            <div class="spot-meta">
+              <div class="label">Silver · spot</div>
+              <div class="price"><span id="silverSpot">—</span><span class="unit">USD / oz t</span></div>
+            </div>
+            <button class="spot-edit" id="silverEditBtn" aria-controls="spotPanel" aria-expanded="false">Edit</button>
+          </article>
+        </div>
+
+        <div class="spot-foot">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>Spot reference last set <span id="spotAsOf">—</span>.</span>
+          <span>Markets move every minute — your firm price is locked when we meet.</span>
+        </div>
+
+        <div class="spot-edit-panel" id="spotPanel" role="dialog" aria-label="Edit spot price reference">
+          <div>
+            <label for="goldSpotInput">Gold (USD / oz t)</label>
+            <input type="number" id="goldSpotInput" step="0.01" min="0" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="silverSpotInput">Silver (USD / oz t)</label>
+            <input type="number" id="silverSpotInput" step="0.01" min="0" inputmode="decimal" />
+          </div>
+          <button class="apply" id="applySpot">Apply</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESTIMATOR ============ -->
+  <section id="estimator" aria-label="Instant payout estimator">
+    <div class="container">
+      <span class="eyebrow">Instant Estimator</span>
+      <h2>Know your number <span class="ital">before</span> we meet.</h2>
+      <p class="section-lede">
+        Enter what you have. We'll show you the melt value and your transparent NEPA-PRO GOLD offer
+        — always 10 to 15% below today's spot. The numbers below are estimates; we'll confirm
+        every figure in front of you, in writing.
+      </p>
+
+      <div class="estimator-shell">
+        <!-- Metal switcher -->
+        <div class="seg" id="metalSeg" role="tablist" aria-label="Choose metal">
+          <span class="pill" aria-hidden="true"></span>
+          <button role="tab" aria-selected="true"  data-metal="au">Gold</button>
+          <button role="tab" aria-selected="false" data-metal="ag">Silver</button>
+        </div>
+
+        <div class="est-grid">
+          <!-- LEFT: inputs -->
+          <div>
+            <!-- Karat / fineness chips -->
+            <div id="purityWrap">
+              <p class="field-label" id="purityLabel">Karat</p>
+              <div class="chip-row" id="chipRow" role="radiogroup" aria-labelledby="purityLabel">
+                <!-- Filled by JS -->
+              </div>
+            </div>
+
+            <!-- Weight -->
+            <div style="margin-top: 22px;">
+              <p class="field-label">Weight</p>
+              <div class="input-row">
+                <input class="text-input" id="weightInput" type="number" inputmode="decimal" step="0.01" min="0" placeholder="e.g. 14.6" autocomplete="off" />
+                <div class="unit-seg" data-idx="0" role="radiogroup" aria-label="Unit">
+                  <span class="pill" aria-hidden="true"></span>
+                  <button role="radio" aria-selected="true"  data-unit="g">Grams</button>
+                  <button role="radio" aria-selected="false" data-unit="dwt">DWT</button>
+                  <button role="radio" aria-selected="false" data-unit="ozt">Oz t</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Offer slider -->
+            <div style="margin-top: 22px;">
+              <p class="field-label">Your NEPA-PRO GOLD offer</p>
+              <div class="slider-shell">
+                <div class="slider-row">
+                  <span class="pct"><span id="pctOfSpot">87.5</span>%<span class="small"> of spot</span></span>
+                  <span class="below"><span id="belowPct">12.5</span>% below spot</span>
+                </div>
+                <input type="range" class="range" id="offerRange" min="85" max="90" step="0.5" value="87.5" aria-label="Offer percentage of spot" />
+                <div class="range-ticks" aria-hidden="true">
+                  <span>85%</span><span>87.5%</span><span>90%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: payout -->
+          <div>
+            <div class="payout-card" aria-live="polite">
+              <div class="label-row">
+                <span>Your estimated payout</span>
+                <span id="payoutPctTop">87.5%</span>
+              </div>
+              <div class="your-offer" id="payoutBig">$0.00</div>
+              <div class="payout-meta">
+                <div class="row">
+                  <span class="lab">Pure metal</span>
+                  <span id="pureMetal">0.00 g · 0.00 oz t</span>
+                </div>
+                <div class="row">
+                  <span class="lab">Melt value</span>
+                  <span id="meltValue">$0.00</span>
+                </div>
+                <div class="row">
+                  <span class="lab">Spot used</span>
+                  <span id="spotUsed">$0.00 / oz t</span>
+                </div>
+              </div>
+
+              <div class="payout-cta-row">
+                <a class="email-quote-btn" id="emailQuoteBtn" href="mailto:sell@nepa-gold.com">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Email this estimate
+                </a>
+                <a class="cta-secondary" href="tel:+15706777971" style="justify-content:center;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Or call 570-677-7971
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="est-note">
+          Payout figure is an estimate based on the spot reference shown above.
+          NEPA-PRO GOLD's actual offer is calculated against the live wholesale spot price at the moment we meet,
+          always between 85 and 90% of spot for gold and silver. We test purity in front of you and
+          weigh on a calibrated scale you can read from your seat. Numismatic, dental, and bullion items
+          may carry different terms — we'll explain any variation before you accept.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE BUY ============ -->
+  <section aria-label="What we buy">
+    <div class="container">
+      <span class="eyebrow">What We Buy</span>
+      <h2>Everything from the jewelry box to the <span class="ital">safe deposit.</span></h2>
+      <p class="section-lede">
+        If it's gold, silver, or platinum, we'll quote it. Bring out the broken chains, the
+        mismatched earrings, the inherited bullion you've never weighed.
+      </p>
+
+      <div class="buy-grid">
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M9 8 12 3l3 5"/></svg></div>
+          <h3>Gold jewelry</h3>
+          <p>10K, 14K, 18K, 22K, 24K. Chains, rings, bracelets, watches — broken or intact.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="10" rx="1.5"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Bullion &amp; bars</h3>
+          <p>Eagles, Maples, Krugerrands, Buffalos, Engelhard, Johnson Matthey, Pamp Suisse.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/></svg></div>
+          <h3>Coins</h3>
+          <p>Pre-1965 silver, junk silver bags, gold sovereigns, commemoratives, and proof sets.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-2 12H5L3 7Z"/><path d="M8 7V4h8v3"/></svg></div>
+          <h3>Sterling silverware</h3>
+          <p>Flatware sets, tea services, trays, candelabra. Hallmarked .800, .900, .925.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-2 7H7L5 4Z"/><path d="M7 11l-1 9h12l-1-9"/></svg></div>
+          <h3>Scrap &amp; broken</h3>
+          <p>Mismatched earrings, snapped chains, dented rings, class rings, missing stones.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-3 0-5 2.5-5 5 0 3 2 5 5 9 3-4 5-6 5-9 0-2.5-2-5-5-5Z"/><circle cx="12" cy="9" r="1.5"/></svg></div>
+          <h3>Dental gold</h3>
+          <p>Crowns, bridges, and dental scrap — discreet, respectful, fair pricing on the metal.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Pocket watches</h3>
+          <p>Hunter cases, gold-filled, solid 14K and 18K cases. We weigh after the movement is removed.</p>
+        </article>
+
+        <article class="buy-card">
+          <div class="buy-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4l8 8-8 8-8-8Z"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+          <h3>Platinum</h3>
+          <p>Jewelry, lab scrap, catalytic-grade material — assayed and quoted at current spot.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section aria-label="How it works">
+    <div class="container">
+      <span class="eyebrow">How It Works</span>
+      <h2>Three steps. <span class="ital">No surprises.</span></h2>
+      <p class="section-lede">
+        From the first email to cash in your hand, the entire process takes about as long as a cup of coffee.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <span class="num">01</span>
+          <h3>Email or call.</h3>
+          <p>Send a quick note to <a href="mailto:sell@nepa-gold.com">sell@nepa-gold.com</a> or call <a href="tel:+15706777971">570-677-7971</a>. Tell us roughly what you have and where you are. A photo helps but isn't required.</p>
+        </article>
+        <article class="step">
+          <span class="num">02</span>
+          <h3>We come to you.</h3>
+          <p>We arrive at your home, office, or a public place you choose. Calibrated digital scale, X-ray testing on request, and a written breakdown for every piece — line by line.</p>
+        </article>
+        <article class="step">
+          <span class="num">03</span>
+          <h3>Cash on the spot.</h3>
+          <p>If our offer is the right one, you keep the cash that day. If it isn't, you walk away owing nothing — no pressure, no follow-up calls.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PILLARS ============ -->
+  <section aria-label="Why NEPA-PRO GOLD">
+    <div class="container">
+      <span class="eyebrow">Why NEPA-PRO GOLD</span>
+      <h2>Built for the kitchen table, <span class="ital">not the pawn counter.</span></h2>
+      <p class="section-lede">
+        Most precious-metals storefronts are built around opacity. We built NEPA-PRO GOLD around the opposite.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12 11 14 15 10"/></svg></div>
+          <h3>Transparent pricing</h3>
+          <p>Always 10–15% below current wholesale spot. We show you the spot reference, the math, and the math again.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10h3l1 3v3a1 1 0 0 1-1 1h-3z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></div>
+          <h3>We come to you</h3>
+          <p>Mobile by design. Your home, your office, your bank lobby — wherever you feel safest counting cash.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3Z"/></svg></div>
+          <h3>Veteran-owned</h3>
+          <p>Operated by a U.S. veteran. Same handshake principles, same direct way of doing business.</p>
+        </div>
+        <div class="pillar">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <h3>Local to NEPA</h3>
+          <p>From Scranton to the Endless Mountains and the Poconos. Lackawanna, Luzerne, Wayne, Pike, and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE AREA ============ -->
+  <section aria-label="Service area">
+    <div class="container">
+      <span class="eyebrow">Service Area</span>
+      <h2>The whole of <span class="ital">Northeast Pennsylvania.</span></h2>
+      <p class="section-lede">
+        If you're in or near any of these counties, we're a short drive away. Outside of NEPA?
+        Email us anyway — we travel for the right appointment.
+      </p>
+
+      <div class="area-card">
+        <div class="county-row">
+          <span class="county-pill">Lackawanna</span>
+          <span class="county-pill">Luzerne</span>
+          <span class="county-pill">Wayne</span>
+          <span class="county-pill">Pike</span>
+          <span class="county-pill">Susquehanna</span>
+          <span class="county-pill">Wyoming</span>
+          <span class="county-pill">Bradford</span>
+          <span class="county-pill">Carbon</span>
+          <span class="county-pill">Monroe</span>
+          <span class="county-pill">Columbia</span>
+          <span class="county-pill">Schuylkill</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section aria-label="Get a quote">
+    <div class="container">
+      <div class="cta-banner">
+        <span class="eyebrow" style="margin-bottom:10px;">Ready when you are</span>
+        <h2><span class="gold-text">Email</span> us. <span class="ital">We'll handle</span> the rest.</h2>
+        <p>One message. One short visit. Cash in hand the same day.</p>
+        <a class="cta-primary" style="font-size:17px; padding:18px 28px;" href="mailto:sell@nepa-gold.com?subject=Quote%20request%20%E2%80%94%20NEPA-PRO%20GOLD&amp;body=Hi%20NEPA-PRO%20GOLD%2C%0A%0AI%27d%20like%20a%20quote%20on%20the%20following%3A%0A-%20Item(s)%3A%20%0A-%20Approx.%20weight%3A%20%0A-%20Karat%2Ffineness%20(if%20known)%3A%20%0A%0AMy%20town%2Fzip%3A%20%0ABest%20time%20to%20meet%3A%20%0A%0AThanks!">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          sell@nepa-gold.com
+        </a>
+        <p style="font-size:13px; color:var(--ash); margin-top:22px; letter-spacing:0.04em;">
+          Or call <a href="tel:+15706777971" style="color:var(--bullion); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--hairline-on);">570-677-7971</a> — text-friendly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="brand-block">
+            <img src="icon.svg" alt="" width="40" height="40" style="border-radius:10px; box-shadow:0 0 0 1px var(--hairline-mid);" />
+            <div>
+              <div class="brand-name" style="color:var(--cream);">NEPA-PRO <span style="color:var(--bullion);">Gold</span></div>
+              <div style="font-size:12px; color:var(--ash); letter-spacing:0.04em;">Mobile gold &amp; silver buyers — Northeast PA</div>
+            </div>
+          </div>
+          <p style="margin: 0 0 4px; font-size: 13.5px; color: var(--ash-strong);">
+            Veteran-owned. Locally operated. Always 10–15% below spot.
+          </p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:sell@nepa-gold.com">sell@nepa-gold.com</a>
+          <a href="tel:+15706777971">570-677-7971</a>
+        </div>
+
+        <div>
+          <h4>Hours</h4>
+          <span class="hours-line">Mon–Sat · 8am – 8pm</span>
+          <span class="hours-line">Sun · by appointment</span>
+        </div>
+      </div>
+
+      <div class="legal">
+        <span>© <span id="yr">2026</span> NEPA-PRO GOLD. All rights reserved.</span>
+        <span style="opacity:0.55;">Estimates are not firm offers. Final price confirmed at meeting.</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Mobile sticky bottom CTA -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a href="mailto:sell@nepa-gold.com?subject=Quote%20request%20%E2%80%94%20NEPA-PRO%20GOLD">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Email for a quote — sell@nepa-gold.com
+  </a>
+</div>
+
+<script>
+/* ========================================================================
+   NEPA-PRO GOLD — App logic
+   ======================================================================== */
+
+(function(){
+  'use strict';
+
+  // ---------- Constants ----------
+  const TROY_OZ_IN_GRAMS = 31.1034768;
+  const DWT_IN_GRAMS = 1.55517384; // 1 pennyweight
+  const fmtUSD = (n) => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const fmtNum = (n, d=2) => Number(n).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+
+  // Karats (gold) and finenesses (silver)
+  const PURITIES = {
+    au: [
+      { id: '10k',  label: '10K',  sub: '.4167', factor: 0.4167 },
+      { id: '14k',  label: '14K',  sub: '.5833', factor: 0.5833, default: true },
+      { id: '18k',  label: '18K',  sub: '.7500', factor: 0.7500 },
+      { id: '22k',  label: '22K',  sub: '.9167', factor: 0.9167 },
+      { id: '24k',  label: '24K',  sub: '.9990', factor: 0.9990 }
+    ],
+    ag: [
+      { id: '999',  label: 'Fine',     sub: '.999',  factor: 0.999, default: true },
+      { id: '925',  label: 'Sterling', sub: '.925',  factor: 0.925 },
+      { id: '900',  label: 'Coin',     sub: '.900',  factor: 0.900 },
+      { id: '800',  label: 'Continental', sub: '.800', factor: 0.800 }
+    ]
+  };
+
+  // ---------- Default spot reference ----------
+  // Sensible fallbacks based on late April 2026 wholesale market.
+  // Editable inline — and the JS will try to refresh from a free CORS endpoint.
+  const DEFAULT_SPOT = { au: 4650.00, ag: 73.50, asOf: 'late April 2026' };
+  const state = {
+    metal: 'au',
+    purityId: PURITIES.au.find(p => p.default).id,
+    weight: 0,
+    unit: 'g',
+    pct: 87.5,
+    spot: { ...DEFAULT_SPOT }
+  };
+
+  // ---------- DOM refs ----------
+  const $ = (id) => document.getElementById(id);
+  const nav            = $('nav');
+  const goldSpotEl     = $('goldSpot');
+  const silverSpotEl   = $('silverSpot');
+  const spotAsOf       = $('spotAsOf');
+  const goldEditBtn    = $('goldEditBtn');
+  const silverEditBtn  = $('silverEditBtn');
+  const spotPanel      = $('spotPanel');
+  const goldSpotInput  = $('goldSpotInput');
+  const silverSpotInput= $('silverSpotInput');
+  const applySpotBtn   = $('applySpot');
+  const seg            = $('metalSeg');
+  const chipRow        = $('chipRow');
+  const purityLabel    = $('purityLabel');
+  const weightInput    = $('weightInput');
+  const unitSeg        = document.querySelector('.unit-seg');
+  const offerRange     = $('offerRange');
+  const pctOfSpot      = $('pctOfSpot');
+  const belowPct       = $('belowPct');
+  const payoutPctTop   = $('payoutPctTop');
+  const payoutBig      = $('payoutBig');
+  const pureMetal      = $('pureMetal');
+  const meltValue      = $('meltValue');
+  const spotUsed       = $('spotUsed');
+  const emailQuoteBtn  = $('emailQuoteBtn');
+  const stickyCta      = $('stickyCta');
+  const yr             = $('yr');
+
+  yr.textContent = new Date().getFullYear();
+
+  // ---------- Spot price rendering ----------
+  function renderSpot(){
+    goldSpotEl.textContent   = fmtUSD(state.spot.au);
+    silverSpotEl.textContent = fmtUSD(state.spot.ag);
+    spotAsOf.textContent     = state.spot.asOf;
+    goldSpotInput.value      = state.spot.au.toFixed(2);
+    silverSpotInput.value    = state.spot.ag.toFixed(2);
+  }
+
+  // Try to fetch live spot from a free, CORS-friendly endpoint.
+  // Falls back silently to defaults / user-edited values if unreachable.
+  async function tryFetchLiveSpot(){
+    try {
+      // gold-api.com — free, no key, CORS-enabled
+      const [gRes, sRes] = await Promise.all([
+        fetch('https://api.gold-api.com/price/XAU', { cache: 'no-store' }),
+        fetch('https://api.gold-api.com/price/XAG', { cache: 'no-store' })
+      ]);
+      if (!gRes.ok || !sRes.ok) throw new Error('bad status');
+      const g = await gRes.json();
+      const s = await sRes.json();
+      const gp = Number(g.price ?? g.value ?? g.rate);
+      const sp = Number(s.price ?? s.value ?? s.rate);
+      if (Number.isFinite(gp) && gp > 200 && Number.isFinite(sp) && sp > 1) {
+        state.spot.au = gp;
+        state.spot.ag = sp;
+        const now = new Date();
+        state.spot.asOf = now.toLocaleString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric',
+          hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+        });
+        renderSpot();
+        recompute();
+      }
+    } catch (e) {
+      // Silent — defaults are perfectly serviceable.
+    }
+  }
+
+  // ---------- Spot edit panel ----------
+  function toggleSpotPanel(open){
+    const willOpen = (typeof open === 'boolean') ? open : !spotPanel.classList.contains('open');
+    spotPanel.classList.toggle('open', willOpen);
+    goldEditBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    silverEditBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    if (willOpen) goldSpotInput.focus();
+  }
+  goldEditBtn.addEventListener('click',   () => toggleSpotPanel());
+  silverEditBtn.addEventListener('click', () => toggleSpotPanel());
+  applySpotBtn.addEventListener('click', () => {
+    const g = parseFloat(goldSpotInput.value);
+    const s = parseFloat(silverSpotInput.value);
+    if (Number.isFinite(g) && g > 0) state.spot.au = g;
+    if (Number.isFinite(s) && s > 0) state.spot.ag = s;
+    state.spot.asOf = 'manual override · ' + new Date().toLocaleString('en-US', {
+      month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'
+    });
+    renderSpot();
+    recompute();
+    toggleSpotPanel(false);
+  });
+
+  // ---------- Metal segmented switch ----------
+  seg.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const m = btn.dataset.metal;
+    if (!m || m === state.metal) return;
+    state.metal = m;
+    seg.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.metal === m ? 'true' : 'false'));
+    seg.classList.toggle('is-silver', m === 'ag');
+    purityLabel.textContent = (m === 'au') ? 'Karat' : 'Fineness';
+    state.purityId = PURITIES[m].find(p => p.default).id;
+    renderChips();
+    recompute();
+  });
+
+  // ---------- Purity chips ----------
+  function renderChips(){
+    chipRow.innerHTML = '';
+    PURITIES[state.metal].forEach(p => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.setAttribute('role', 'radio');
+      b.setAttribute('aria-selected', p.id === state.purityId ? 'true' : 'false');
+      b.dataset.purity = p.id;
+      b.innerHTML = '<strong>' + p.label + '</strong> <span class="sub">' + p.sub + '</span>';
+      b.addEventListener('click', () => {
+        state.purityId = p.id;
+        chipRow.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-selected', c.dataset.purity === p.id ? 'true' : 'false'));
+        recompute();
+      });
+      chipRow.appendChild(b);
+    });
+  }
+
+  // ---------- Weight ----------
+  weightInput.addEventListener('input', () => {
+    const v = parseFloat(weightInput.value);
+    state.weight = Number.isFinite(v) && v > 0 ? v : 0;
+    recompute();
+  });
+
+  // ---------- Unit segmented ----------
+  unitSeg.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const u = btn.dataset.unit;
+    if (!u) return;
+    state.unit = u;
+    const idx = ['g','dwt','ozt'].indexOf(u);
+    unitSeg.dataset.idx = String(idx);
+    unitSeg.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.unit === u ? 'true' : 'false'));
+    recompute();
+  });
+
+  // ---------- Offer range ----------
+  function syncRangeBg() {
+    const min = +offerRange.min, max = +offerRange.max, val = +offerRange.value;
+    const p = ((val - min) / (max - min)) * 100;
+    offerRange.style.setProperty('--p', p + '%');
+  }
+  offerRange.addEventListener('input', () => {
+    state.pct = parseFloat(offerRange.value);
+    syncRangeBg();
+    recompute();
+  });
+
+  // ---------- Calculation ----------
+  function gramsFromWeight(w, unit) {
+    if (unit === 'g')   return w;
+    if (unit === 'dwt') return w * DWT_IN_GRAMS;
+    if (unit === 'ozt') return w * TROY_OZ_IN_GRAMS;
+    return w;
+  }
+  function purityFactor() {
+    return PURITIES[state.metal].find(p => p.id === state.purityId).factor;
+  }
+
+  function recompute() {
+    // Pure metal weight
+    const grams = gramsFromWeight(state.weight, state.unit);
+    const pureGrams = grams * purityFactor();
+    const pureOz = pureGrams / TROY_OZ_IN_GRAMS;
+
+    // Spot used
+    const spot = state.metal === 'au' ? state.spot.au : state.spot.ag;
+    const melt = pureOz * spot;
+    const offer = melt * (state.pct / 100);
+
+    // Render
+    payoutBig.textContent = fmtUSD(offer);
+    pureMetal.textContent = fmtNum(pureGrams, 2) + ' g · ' + fmtNum(pureOz, 4) + ' oz t';
+    meltValue.textContent = fmtUSD(melt);
+    spotUsed.textContent  = fmtUSD(spot) + ' / oz t';
+
+    pctOfSpot.textContent = fmtNum(state.pct, 1).replace(/\.0$/, '');
+    belowPct.textContent  = fmtNum(100 - state.pct, 1).replace(/\.0$/, '');
+    payoutPctTop.textContent = fmtNum(state.pct, 1).replace(/\.0$/, '') + '%';
+
+    // Update mailto link with full estimate breakdown
+    const purityLab = PURITIES[state.metal].find(p => p.id === state.purityId);
+    const metalName = state.metal === 'au' ? 'Gold' : 'Silver';
+    const subj = encodeURIComponent('Estimate from NEPA-PRO GOLD — ' + metalName + ' ' + purityLab.label);
+    const body = encodeURIComponent(
+      'Hi NEPA-PRO GOLD,\n\n' +
+      'Here\u2019s the estimate I generated on your site. Please confirm and let me know when you can come by.\n\n' +
+      '— Metal: ' + metalName + ' (' + purityLab.label + ' / ' + purityLab.sub + ')\n' +
+      '— Weight entered: ' + state.weight + ' ' + state.unit + '\n' +
+      '— Pure metal: ' + fmtNum(pureGrams, 2) + ' g (' + fmtNum(pureOz, 4) + ' oz t)\n' +
+      '— Spot used: ' + fmtUSD(spot) + ' / oz t (' + state.spot.asOf + ')\n' +
+      '— Melt value: ' + fmtUSD(melt) + '\n' +
+      '— Your NEPA-PRO GOLD estimate at ' + state.pct + '% of spot: ' + fmtUSD(offer) + '\n\n' +
+      'My town/zip:\n' +
+      'Best time to meet:\n\n' +
+      'Thanks!'
+    );
+    emailQuoteBtn.href = 'mailto:sell@nepa-gold.com?subject=' + subj + '&body=' + body;
+  }
+
+  // ---------- Nav scroll state ----------
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 16);
+    // Show sticky CTA after the hero
+    const showAt = (window.innerHeight * 0.85);
+    stickyCta.classList.toggle('visible', window.scrollY > showAt);
+  }
+  document.addEventListener('scroll', onScroll, { passive: true });
+
+  // ---------- Fade-up reveal ----------
+  function reveal() {
+    const els = document.querySelectorAll('.fade-up');
+    els.forEach(el => {
+      const d = parseInt(el.dataset.delay || '0', 10);
+      setTimeout(() => el.classList.add('is-in'), d);
+    });
+  }
+
+  // ---------- Init ----------
+  function init() {
+    renderSpot();
+    renderChips();
+    syncRangeBg();
+    recompute();
+    onScroll();
+    reveal();
+
+    // Try the live API in the background (best effort)
+    if ('fetch' in window) tryFetchLiveSpot();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  // Register service worker (PWA)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(()=>{ /* silent */ });
+    });
+  }
+})();
+</script>
+</body>
+</html>
