@@ -6,7 +6,7 @@
  * - gold-api.com (live spot prices): network-only (never cache stale prices)
  */
 
-const VERSION = 'nepa-gold-v1.2.0';
+const VERSION = 'npg-v1.5.0';
 const SHELL_CACHE = `shell-${VERSION}`;
 const RUNTIME_CACHE = `runtime-${VERSION}`;
 const FONT_CACHE = `fonts-${VERSION}`;
@@ -20,6 +20,9 @@ const APP_SHELL = [
   './favicon-16.png',
   './favicon-32.png',
   './apple-touch-icon.png',
+  './apple-touch-icon-152.png',
+  './apple-touch-icon-167.png',
+  './mask-icon.svg',
   './icon-192.png',
   './icon-512.png',
   './icon-192-maskable.png',

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Single-color, fully opaque shape on transparent background.
+       Safari fills this with the color from the link's `color` attribute. -->
+  <text x="256" y="318" font-family="Georgia, 'Times New Roman', 'DejaVu Serif', serif" font-size="184" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#000">NPG</text>
+  <rect x="106" y="412" width="300" height="42" rx="21" ry="21" fill="none" stroke="#000" stroke-width="6"/>
+  <text x="256" y="441" font-family="Georgia, 'Times New Roman', 'DejaVu Serif', serif" font-size="17" font-weight="700" letter-spacing="3" text-anchor="middle" fill="#000">NEPA-PRO · GOLD</text>
+</svg>

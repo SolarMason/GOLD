@@ -1,6 +1,6 @@
 # NEPA-PRO GOLD — Mobile Gold & Silver Buyers PWA
 
-Production-ready single-page progressive web app for **nepa-gold.com**.
+Production-ready single-page progressive web app for **gold.nepa-pro.com**.
 Veteran-owned, Northeast Pennsylvania mobile gold & silver buyer.
 Built with iOS-native UX feel, glassmorphism + bullion-luxury aesthetic.
 
@@ -14,23 +14,25 @@ Built with iOS-native UX feel, glassmorphism + bullion-luxury aesthetic.
 | `manifest.webmanifest` | PWA manifest. Makes the site installable on iOS/Android/desktop. |
 | `sw.js` | Service worker. App-shell precache, offline fallback, network-first HTML. |
 | `favicon.svg` / `favicon.ico` / `favicon-16.png` / `favicon-32.png` | Favicon set for every browser. |
-| `apple-touch-icon.png` | 180×180 — iOS home screen icon (no transparency, per Apple spec). |
+| `apple-touch-icon.png` + `-167.png` + `-152.png` | iPhone + iPad home-screen icons in 152/167/180. iOS picks the right size automatically. |
+| `mask-icon.svg` | Monochrome SVG for Safari pinned-tab rendering (filled with `#d4af37`). |
 | `icon-192.png` / `icon-512.png` | PWA icons (`purpose: any`). |
 | `icon-192-maskable.png` / `icon-512-maskable.png` | Android adaptive icons (`purpose: maskable`). |
-| `icon.svg` | The vector NG monogram used as the in-page logo. |
+| `icon.svg` | The vector NPG monogram used as the in-page logo. |
+| `splash/splash-*.png` (14 files) | iOS launch screens for every iPhone + iPad family. Without these, iOS shows a blank white frame on PWA launch — these give a branded launch matching the hero. |
 | `og-card.png` / `og-card.svg` | 1200×630 unified business-card share image (Open Graph + Twitter Card + iMessage). |
 
 ---
 
 ## Deploy
 
-This is a static site. Drop the contents of this folder at the **root** of any static host and point `nepa-gold.com` at it. Three good options:
+This is a static site. Drop the contents of this folder at the **root** of any static host and point `gold.nepa-pro.com` at it. Three good options:
 
 ### Option A — GitHub Pages (free, easy)
-1. Create a repo, e.g. `nepa-gold/nepa-gold.com`.
+1. Create a repo, e.g. `nepa-pro/gold.nepa-pro.com`.
 2. Commit every file in this folder to the root of `main`.
 3. Settings → Pages → Source: **GitHub Actions** (or **Deploy from branch: main / root**).
-4. Settings → Pages → Custom domain: `nepa-gold.com`. GitHub will create a `CNAME` file for you.
+4. Settings → Pages → Custom domain: `gold.nepa-pro.com`. GitHub will create a `CNAME` file for you.
 5. At your DNS provider, point:
    - `ALIAS` / `ANAME` `@` → `<your-username>.github.io`
    - `CNAME` `www` → `<your-username>.github.io`
@@ -39,7 +41,7 @@ This is a static site. Drop the contents of this folder at the **root** of any s
 ### Option B — Cloudflare Pages
 1. New project → Connect repo (or upload directly).
 2. Build command: *none*. Output directory: `/` (or wherever this folder lives).
-3. Custom domain → `nepa-gold.com`. Cloudflare handles the cert.
+3. Custom domain → `gold.nepa-pro.com`. Cloudflare handles the cert.
 
 ### Option C — Netlify / Vercel
 Drag-and-drop the folder. Add the custom domain in the dashboard.
@@ -57,13 +59,13 @@ Drag-and-drop the folder. Add the custom domain in the dashboard.
 - **Silver fineness:** .999 (default), .925 sterling, .900 coin, .800 continental.
 - **Weight units:** grams / dwt / troy oz (segmented control, all units convert internally to grams).
 - **Offer slider:** 85–90% of spot value (i.e. **10–15% below spot, exactly as advertised**). Default 87.5%.
-- The **Email this estimate** button writes the entire breakdown into the mailto body, so when someone taps it they get a fully-prefilled email to `sell@nepa-gold.com` with the metal type, weight, purity, percent of spot, and computed payout. No form submission backend needed — the user's mail client handles it.
+- The **Email this estimate** button writes the entire breakdown into the mailto body, so when someone taps it they get a fully-prefilled email to `service@nepa-pro.com` with the metal type, weight, purity, percent of spot, and computed payout. No form submission backend needed — the user's mail client handles it.
 
 ## CTA architecture (no dead links)
 
 Every interactive element on the page resolves to **exactly one of three things**:
 
-1. `mailto:sell@nepa-gold.com` (with prefilled subject + body) — the primary CTA, repeated in hero, calculator, and final banner.
+1. `mailto:service@nepa-pro.com` (with prefilled subject + body) — the primary CTA, repeated in hero, calculator, and final banner.
 2. `tel:+15706777971` — the click-to-call pill in the upper-right, plus a few secondary spots.
 3. Internal anchor scroll (`#estimator`, `#top`).
 
@@ -92,7 +94,7 @@ Bump these every few months and re-deploy. The page also lets visitors edit pric
 
 When you ship a meaningful change, bump the version string at the top of `sw.js`:
 ```js
-const VERSION = 'nepa-gold-v1.0.0';  // change to v1.0.1, etc.
+const VERSION = 'npg-v1.0.0';  // change to v1.0.1, etc.
 ```
 This invalidates the old cache and pulls the new app shell on the next visit.
 
@@ -128,4 +130,4 @@ Glass:  backdrop-filter: saturate(180%) blur(22px); rgba(28,24,18,0.55) bg
 ---
 
 Built for Solar Mason / NEPA-PRO GOLD.
-Questions: `sell@nepa-gold.com` · `570-677-7971`
+Questions: `service@nepa-pro.com` · `570-677-7971`

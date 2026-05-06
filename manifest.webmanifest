@@ -13,6 +13,7 @@
   "lang": "en-US",
   "dir": "ltr",
   "categories": ["finance", "business", "shopping", "lifestyle"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "favicon.svg",
@@ -55,7 +56,7 @@
     {
       "name": "Email a quote request",
       "short_name": "Email",
-      "description": "Send your gold or silver details to sell@nepa-gold.com",
+      "description": "Send your gold or silver details to service@nepa-pro.com",
       "url": "/?action=email",
       "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
     },
