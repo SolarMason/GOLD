@@ -1,0 +1,19 @@
+/* TEAM */
+  Owner & Operator: Noel Segui
+  Role: Founder, NEPA-PRO LLC
+  Location: Clarks Summit, Pennsylvania, USA
+  Veteran-owned and operated.
+
+/* CONTACT */
+  Phone: 570-677-7971
+  Email: service@nepa-pro.com
+
+/* SITE */
+  Standards: HTML5, CSS3, ES2020+
+  Components: Self-contained PWA, no framework
+  Fonts: iOS native (SF Pro Display, SF Pro Text, SF Mono)
+  Colors: Champagne, Bullion, Noir, Obsidian
+  Updated: 2026-05-08
+
+/* THANKS */
+  To every NEPA neighbor who chose transparency over the pawn-counter hustle.

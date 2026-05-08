@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Not found — NEPA-PRO GOLD</title>
+<meta name="description" content="That page wandered off. Head back to NEPA-PRO GOLD's home page or call 570-677-7971." />
+<meta name="robots" content="noindex, follow" />
+<meta name="theme-color" content="#0a0907" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<style>
+  :root {
+    --noir: #0a0907; --obsidian: #14110d; --ink: #1c1812;
+    --champagne: #e6c878; --gold: #d4af37; --bullion: #f4d68a; --cream: #faf3e0;
+    --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+    --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; min-height: 100%; }
+  body {
+    background:
+      radial-gradient(120% 70% at 20% 0%, rgba(180,134,11,0.16) 0%, rgba(180,134,11,0) 55%),
+      radial-gradient(80% 60% at 80% 100%, rgba(244,214,138,0.06) 0%, rgba(244,214,138,0) 60%),
+      var(--noir);
+    color: var(--cream);
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    padding: 32px 24px;
+  }
+  main { max-width: 560px; text-align: center; }
+  .four {
+    font-family: var(--display); font-weight: 700; font-style: italic;
+    font-size: clamp(110px, 22vw, 200px);
+    line-height: 0.9; letter-spacing: -0.04em;
+    background: linear-gradient(180deg, #fff7d8 0%, #f4d68a 38%, #d4af37 62%, #8a6515 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 18px;
+  }
+  h1 { font-family: var(--display); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  p { font-size: 17px; line-height: 1.55; opacity: 0.8; margin: 0 0 28px; }
+  .actions { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  @media (min-width: 520px) { .actions { flex-direction: row; justify-content: center; } }
+  a.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 26px; border-radius: 14px;
+    font-family: var(--display); font-weight: 600; font-size: 16px;
+    text-decoration: none; min-height: 44px;
+    transition: transform 180ms cubic-bezier(0.16,1,0.3,1), box-shadow 180ms;
+  }
+  a.btn:hover { transform: translateY(-1px); }
+  a.primary {
+    background: linear-gradient(180deg, #f4d68a 0%, #d4af37 60%, #b8860b 100%);
+    color: #1a1208;
+    box-shadow: 0 4px 24px rgba(212,175,55,0.25);
+  }
+  a.secondary {
+    color: var(--cream);
+    border: 1px solid rgba(244,214,138,0.32);
+    background: rgba(28,24,18,0.55);
+    backdrop-filter: blur(14px);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="four">404</div>
+    <h1>That page wandered off.</h1>
+    <p>The link is broken or the page moved. Either way, the gold's still good. Let's get you somewhere useful.</p>
+    <div class="actions">
+      <a class="btn primary" href="/">Back to home</a>
+      <a class="btn secondary" href="tel:+15706777971">Call 570-677-7971</a>
+    </div>
+  </main>
+</body>
+</html>

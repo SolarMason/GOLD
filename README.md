@@ -50,12 +50,45 @@ Drag-and-drop the folder. Add the custom domain in the dashboard.
 
 ---
 
+## Live spot price subsystem
+
+The estimator pulls **live spot prices** from `api.gold-api.com` — a free, no-key, no-signup, CORS-enabled endpoint serving real-time XAU (gold) and XAG (silver) prices in USD/oz t. The implementation is built for resilience:
+
+**On every page load:**
+1. **Instant hydrate from localStorage cache** — if the user has visited before, the most recent live price they saw renders before any network call. No flash of stale baked-in defaults.
+2. **Background fetch from `api.gold-api.com`** — single retry with 1.5s backoff if the first attempt fails.
+3. **Status badge updates live**: `LIVE · just now` (green pulsing) → `LIVE · 3 min ago` → `CACHED · 45 min ago` (amber).
+
+**While the tab stays open:**
+- Auto-refreshes every **5 minutes**.
+- Pauses when the tab is backgrounded; immediately re-fetches when the user returns if data is older than 5 min.
+- Updates the relative-time label every 30 seconds so "just now" smoothly becomes "1 min ago".
+
+**Manual control:**
+- A **Refresh** button next to the status badge lets users force-pull the latest price.
+- Throttled to one request per 30 seconds (so users can't accidentally hammer the API).
+- An **Edit** button on each price chip lets users override the spot manually — when overridden, the badge shows `MANUAL OVERRIDE · X min ago` and auto-refresh pauses for that price (the live fetcher won't quietly overwrite the user's value).
+
+**Failure modes (graceful):**
+- API unreachable + no cache + no manual override → status reads `Live feed unavailable · estimate only` and the page uses the baked-in floor values until the next attempt succeeds.
+- localStorage unavailable (private mode, quota) → silently degrades to fetch-every-load, no cache. Still works.
+- Bad data from API (negative number, NaN, gold price below $200/oz which is impossible) → rejected, retry attempted, falls through to cache or default.
+
+**No API key required, ever.** If `gold-api.com` ever goes away, swap the two URLs at the top of the live-price subsystem in `index.html`:
+```js
+const SPOT_API = {
+  gold:   'https://api.gold-api.com/price/XAU',
+  silver: 'https://api.gold-api.com/price/XAG'
+};
+```
+
+Other free options to swap to (some require a free signup/API key): `metals.dev` (100 free req/month), `metalpriceapi.com`, `goldapi.io` (100 req/day free).
+
+---
+
 ## How the calculator works
 
-- **Live spot prices** are fetched from `api.gold-api.com` (free, no key, CORS-enabled).
-  - If the call fails (offline, blocked, downtime), the page silently falls back to baked-in defaults from late April 2026: gold ~$4,650/oz t, silver ~$73.50/oz t.
-  - The user can always tap **Edit** on either price chip to override the value manually.
-- **Karat factors:** 10K=0.4167, 14K=0.5833, 18K=0.7500, 22K=0.9167, 24K=0.9990.
+- **Karat factors (gold):** 10K=0.4167, 14K=0.5833, 18K=0.7500, 22K=0.9167, 24K=0.9990.
 - **Silver fineness:** .999 (default), .925 sterling, .900 coin, .800 continental.
 - **Weight units:** grams / dwt / troy oz (segmented control, all units convert internally to grams).
 - **Offer slider:** 85–90% of spot value (i.e. **10–15% below spot, exactly as advertised**). Default 87.5%.
@@ -131,3 +164,65 @@ Glass:  backdrop-filter: saturate(180%) blur(22px); rgba(28,24,18,0.55) bg
 
 Built for Solar Mason / NEPA-PRO GOLD.
 Questions: `service@nepa-pro.com` · `570-677-7971`
+
+---
+
+## SEO — what's wired in vs. what only you can do
+
+### What ships in the code (already done, 100/100 Lighthouse SEO ready)
+
+**Structured data (the biggest lever for AI search & voice).** A 6-entity JSON-LD `@graph` covers:
+- `LocalBusiness` with full geo, service area circle, opening hours, payment methods, ID-tagged for cross-referencing
+- `Organization` (parent NEPA-PRO LLC) with `subOrganization` link to the gold business — this is how Google/Claude/GPT understand corporate relationships
+- `WebSite` + `WebPage` with `speakable` CSS selectors — tells Siri, Alexa, and Google Assistant which parts of the page to read aloud
+- `BreadcrumbList` for SERP breadcrumb display
+- `FAQPage` with 10 Q&A pairs in voice-search format — this is what powers Google AI Overviews, ChatGPT citations, and assistant answers
+- `OfferCatalog` with 8 services so search engines understand what we buy
+
+**On-page meta.** Geo region, lat/lng, ICBM coordinates (Bing/Yandex), comprehensive description, semantic keywords, robots directives with `max-image-preview:large`.
+
+**robots.txt.** Explicitly welcomes all 20+ major AI crawlers — GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, Applebot, Applebot-Extended (Siri/Apple Intelligence), Amazonbot (Alexa), Meta-ExternalAgent, Bingbot, DuckAssistBot, MistralAI-User, CCBot, YouBot, plus all social preview bots.
+
+**sitemap.xml** with image sitemap extension and `lastmod` dates so AI crawlers see freshness signals.
+
+**llms.txt** — the emerging standard for LLM-readable site summaries. Gives ChatGPT, Claude, and Perplexity a clean concise digest of who we are, what we buy, how pricing works, hours, and contact info. Even when full crawls don't happen, this single file can keep the model's answer accurate.
+
+**FAQ section** with 10 questions structured as both human-readable accordion *and* `FAQPage` schema. The questions are written in real voice-search syntax: "Where can I sell gold near me…", "How much will I get for my gold?", etc.
+
+**Service-worker SEO bypass.** robots.txt, sitemap.xml, llms.txt, and humans.txt are explicitly *never* cached by the SW — search crawlers always see the live versions, never a stale copy.
+
+**404 page** branded and matching the design system.
+
+### What only you can do (off-page — bigger ranking lever than code)
+
+Honest truth: for **local search rankings**, on-page SEO is maybe 20% of the equation. The other 80% is off-page. To rank #1 in NEPA for "sell gold near me," do these in order:
+
+1. **Google Business Profile** ← biggest single ranking factor. Free at https://business.google.com. Set business name, address (or service area), phone, hours, photos. Verify by postcard. **Without this, no on-page work will get you top-3 in local search.**
+2. **Apple Business Connect** at https://businessconnect.apple.com — this is what makes Siri actually find you on iPhone Maps/Spotlight searches.
+3. **Bing Places for Business** at https://www.bingplaces.com — feeds Alexa, ChatGPT search, DuckDuckGo.
+4. **Yelp listing** — even if you never use Yelp directly, Apple Maps and Alexa pull from it as a citation source.
+5. **NAP consistency.** Your Name + Address + Phone must match *byte-for-byte* across every listing. Pick one canonical format and stick to it everywhere: `NEPA-PRO GOLD` / `service@nepa-pro.com` / `570-677-7971` / Clarks Summit, PA.
+6. **Citations** — get listed at: BBB, Yellow Pages, Manta, Foursquare, Hotfrog, Chamber of Commerce of NE Pennsylvania, Scranton/Wilkes-Barre business directories.
+7. **Real customer reviews** on Google Business Profile. Aim for 10+ to start showing up in the local 3-pack. Never fabricate.
+8. **Local backlinks** — guest post on a NEPA-area blog, get mentioned in the Scranton Times-Tribune or Times Leader, local Chamber listing.
+9. **Submit sitemap manually** to Google Search Console (https://search.google.com/search-console) and Bing Webmaster Tools (https://www.bing.com/webmasters) once the site is live.
+
+### About ranking for "everything NEPA-PRO does"
+
+This site (`gold.nepa-pro.com`) is laser-focused on gold/silver buying — that's actually a strength, not a weakness. Google ranks specialized pages higher than generalist ones for specific queries.
+
+For NEPA-PRO's other services (mold remediation, electrical, HVAC, full-home renovations, etc.), you want the parent **`nepa-pro.com`** to either:
+- (A) Be a hub site that links out to subdomains for each major service line — `mold.nepa-pro.com`, `electric.nepa-pro.com`, etc. (best for SEO if you have the time)
+- (B) Be a single comprehensive site with one detailed page per service, all interlinked from a clear top-nav
+
+The schema on **this** page is already wired to credit **NEPA-PRO LLC** as the parent organization (`subOrganization` → `parentOrganization` schema link), so when search engines crawl us, they associate the gold business with the broader NEPA-PRO brand. Once `nepa-pro.com` ships with similar structured data and `subOrganization` listings for each service line, you'll have a proper corporate knowledge graph in Google.
+
+### Quick post-launch verification
+
+After deploying:
+1. Test rich results: https://search.google.com/test/rich-results?url=https://gold.nepa-pro.com/
+2. Test mobile-friendly: https://search.google.com/test/mobile-friendly
+3. Run Lighthouse in Chrome DevTools (target: 100 SEO, 100 PWA, 90+ Performance)
+4. Verify schema: https://validator.schema.org/?url=https%3A%2F%2Fgold.nepa-pro.com%2F
+5. Submit sitemap to Google Search Console and Bing Webmaster Tools
+6. Check robots.txt: https://gold.nepa-pro.com/robots.txt

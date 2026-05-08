@@ -6,7 +6,7 @@
  * - gold-api.com (live spot prices): network-only (never cache stale prices)
  */
 
-const VERSION = 'npg-v1.5.0';
+const VERSION = 'npg-v1.8.0';
 const SHELL_CACHE = `shell-${VERSION}`;
 const RUNTIME_CACHE = `runtime-${VERSION}`;
 const FONT_CACHE = `fonts-${VERSION}`;
@@ -23,6 +23,9 @@ const APP_SHELL = [
   './apple-touch-icon-152.png',
   './apple-touch-icon-167.png',
   './mask-icon.svg',
+  './404.html',
+  './llms.txt',
+  './humans.txt',
   './icon-192.png',
   './icon-512.png',
   './icon-192-maskable.png',
@@ -66,6 +69,12 @@ const isFont = (url) =>
 
 const isLivePrice = (url) => url.hostname === 'api.gold-api.com';
 
+// SEO-critical files: never cache. Search engine crawlers must see the
+// live versions every time, never a stale service-worker cache.
+const isSEOFile = (url) =>
+  url.origin === self.location.origin &&
+  /\/(robots\.txt|sitemap\.xml|llms\.txt|humans\.txt)$/i.test(url.pathname);
+
 // --- Fetch strategy --------------------------------------------------------
 self.addEventListener('fetch', (event) => {
   const { request } = event;
@@ -75,6 +84,10 @@ self.addEventListener('fetch', (event) => {
 
   // 1) Live spot prices: never cache. Let the page handle failures gracefully.
   if (isLivePrice(url)) return;
+
+  // 1b) SEO-critical files (robots.txt, sitemap.xml, llms.txt, humans.txt):
+  //     never cache. Crawlers must always see the live version.
+  if (isSEOFile(url)) return;
 
   // 2) HTML navigations: network-first with cache fallback.
   if (isHTML(request)) {
